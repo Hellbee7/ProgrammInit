@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int N;
+    cin >> N;
+    
+    int num = 0;
+    int sum = 0;
+    int digit = 0;
+ for(;;)
+ {
+     if (num <= N)
+     {
+         digit = num % 10;
+     }
+     else
+     {
+         break;
+     }
+     
+     if (digit % 3 == 0)
+     {
+         sum = sum + num;
+         num = num + 1;
+     }
+     else
+     {
+         num = num + 1;
+     }
+ }
+ 
+ cout << sum;
+ 
+    return 0;
+}
